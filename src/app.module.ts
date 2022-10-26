@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { JogadoresModule } from './jogadores/jogadores.module';
+import { JogoModule } from './jogo/jogo.module';
 require('dotenv').config();
 
 @Module({
@@ -14,6 +15,7 @@ require('dotenv').config();
       // useFindAndModify: false,
     }),
     JogadoresModule,
+    JogoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
